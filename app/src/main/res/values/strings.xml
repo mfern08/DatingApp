@@ -2,16 +2,15 @@
     <string name="app_name">DatingApp</string>
     <string name="sign_up">Sign Up</string>
     <string name="fernandez_maria">Fernandez, Maria</string>
-    <string name="name_maria">Name(Maria)</string>
-    <string name="email_maria_gmail_com">Email(maria@gmail.com)</string>
-    <string name="birthday_must_be_18">Birthday(Must be 18+)</string>
-    <string name="username">Username</string>
+    <string name="name">Name(Maria)</string>
+    <string name="email">Email(maria@gmail.com)</string>
+    <string name="date">Birthday(Must be 18+)</string>
     <string name="Profile_Name">ProfileName</string>
     <string name="ProfileAge">ProfileAge</string>
     <string name="occupation">Occupation</string>
     <string name="avatar">avatar</string>
     <string name="your_occupation">Your Occupation</string>
     <string name="about_me_summary">About me</string>
-    <string name="a_little_about_you">A little about you</string>
+    <string name="info">A little about you</string>
 
 </resources>
