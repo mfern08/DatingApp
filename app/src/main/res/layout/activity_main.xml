@@ -6,26 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <EditText
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="158dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginBottom="19dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/username"
+        app:layout_constraintStart_toStartOf="@+id/username"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/date"
         android:layout_width="211dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="27dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/date"
@@ -35,42 +35,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/info" />
 
+
     <EditText
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="16dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/occupation"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
-
+        app:layout_constraintEnd_toEndOf="@+id/occupation"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="135dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="182dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="37dp"
+        android:onClick="openSecondActivity"
         android:text="@string/sign_up"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/date"
         app:layout_constraintTop_toBottomOf="@+id/date" />
 
     <EditText
         android:id="@+id/occupation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
         android:layout_marginBottom="24dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/your_occupation"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/info"
-        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/info"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <EditText
@@ -85,6 +90,30 @@
         app:layout_constraintBottom_toTopOf="@+id/date"
         app:layout_constraintStart_toStartOf="@+id/date"
         app:layout_constraintTop_toBottomOf="@+id/occupation" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/username"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:text="@string/fernandez_maria_4_27_2021"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
