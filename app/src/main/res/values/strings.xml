@@ -14,5 +14,7 @@
     <string name="info">A little about you</string>
     <string name="username">Username</string>
     <string name="fernandez_maria_4_27_2021">Fernandez, Maria 4/27/2021</string>
+    <string name="matches">Matches go here</string>
+    <string name="settings">Settings go here</string>
 
 </resources>

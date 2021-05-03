@@ -93,6 +93,10 @@ public class MainActivity extends AppCompatActivity implements OnDateSetListener
             textView.setError("Must be 18 Years or Older");
             return;
         }
+        Bundle bundle = new Bundle();
+        bundle.putInt(Constants.KEY_AGE, age);
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtras(bundle);
     }
 
     public static boolean emailValid(CharSequence c){
@@ -135,7 +139,6 @@ public class MainActivity extends AppCompatActivity implements OnDateSetListener
         Bundle bundle = new Bundle();
 
         bundle.putString(Constants.KEY_NAME, name.getText().toString());
-        bundle.putInt(Constants.KEY_AGE, 30);
         bundle.putString(Constants.KEY_OCC, occupation.getText().toString());
         bundle.putString(Constants.KEY_INFO, info.getText().toString());
         intent.putExtras(bundle);

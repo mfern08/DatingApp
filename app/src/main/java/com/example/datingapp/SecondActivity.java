@@ -11,6 +11,7 @@ public class SecondActivity extends AppCompatActivity {
     private TextView name;
     private TextView occupation;
     private TextView info;
+    private TextView age;
 
 
     @Override
@@ -22,7 +23,7 @@ public class SecondActivity extends AppCompatActivity {
         Bundle b = intent.getExtras();
 
         name = findViewById(R.id.name);
-        //age = findViewByID(R.id.ProfileAge);
+        age = findViewById(R.id.ProfileAge);
         occupation = findViewById(R.id.occupation);
         info = findViewById(R.id.info);
 
@@ -38,9 +39,9 @@ public class SecondActivity extends AppCompatActivity {
             if (b.containsKey((Constants.KEY_INFO))) {
                 info.setText(b.getString(Constants.KEY_INFO));
             }
-           /* if (b.containsKey((Constants.KEY_AGE))) {
-                age.setText(b.getString(Constants.KEY_AGE));
-            }*/
+           if (b.containsKey((Constants.KEY_AGE))) {
+                age.setText(b.getInt(Constants.KEY_AGE));
+            }
 
         }
     }
