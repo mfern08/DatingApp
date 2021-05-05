@@ -20,8 +20,10 @@ import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Calendar;
+import java.util.Date;
 
 import static android.app.DatePickerDialog.OnDateSetListener;
+import static com.example.datingapp.Constants.KEY_AGE;
 
 public class MainActivity extends AppCompatActivity implements OnDateSetListener {
 
@@ -79,25 +81,33 @@ public class MainActivity extends AppCompatActivity implements OnDateSetListener
         cal.set(Calendar.MONTH, month);
         cal.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
-        LocalDate bday = LocalDate.of(Calendar.YEAR, Calendar.MONTH, Calendar.DAY_OF_MONTH);
-        LocalDate today = LocalDate.now();
-
-        String dateString = DateFormat.getDateInstance(DateFormat.SHORT).format(cal.getTime());
-
+        Date ofAge = new Date(1050871680000L);
         textView = (TextView) findViewById(R.id.date);
-        textView.setText(dateString);
+        button = (Button) findViewById(R.id.button);
 
-        int age = Period.between(today, bday).getYears();
+        Date bday = new Date();
 
-        if(age < 17 ){
-            textView.setError("Must be 18 Years or Older");
-            return;
+
+        long lnum = Math.subtractExact(bday.getTime(), cal.getTime().getTime());
+        int age = (int) Long.divideUnsigned(lnum, 31557600000L);
+        StringBuilder strAge = new StringBuilder();
+        strAge.append(age);
+
+
+        if (cal.getTime().compareTo(ofAge) > 0) {
+            textView.setError("Must Be 18+ years");
+            button.setEnabled(false);
+        } else {
+            textView.setText(strAge);
+            button.setEnabled(true);
         }
+
         Bundle bundle = new Bundle();
-        bundle.putInt(Constants.KEY_AGE, age);
+        bundle.putInt(KEY_AGE, age);
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtras(bundle);
     }
+
 
     public static boolean emailValid(CharSequence c){
         return !TextUtils.isEmpty(c) && Patterns.EMAIL_ADDRESS.matcher(c).matches();
@@ -109,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements OnDateSetListener
 
         name = findViewById(R.id.name);
         username = findViewById(R.id.username);
-        age = findViewById(R.id.ProfileAge);
+        age = findViewById(R.id.date);
         occupation = findViewById(R.id.occupation);
         info = findViewById(R.id.info);
         email = findViewById(R.id.email);
@@ -139,6 +149,7 @@ public class MainActivity extends AppCompatActivity implements OnDateSetListener
         Bundle bundle = new Bundle();
 
         bundle.putString(Constants.KEY_NAME, name.getText().toString());
+        bundle.putString(KEY_AGE, age.getText().toString());
         bundle.putString(Constants.KEY_OCC, occupation.getText().toString());
         bundle.putString(Constants.KEY_INFO, info.getText().toString());
         intent.putExtras(bundle);

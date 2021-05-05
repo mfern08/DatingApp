@@ -4,7 +4,7 @@
     <string name="fernandez_maria">Fernandez, Maria</string>
     <string name="name">Name(Maria)</string>
     <string name="email">Email(maria@gmail.com)</string>
-    <string name="date">Birthday(Must be 18+)</string>
+    <string name="date"><u>Enter Birthday(Must be 18+)</u></string>
     <string name="Profile_Name">ProfileName</string>
     <string name="ProfileAge">ProfileAge</string>
     <string name="occupation">Occupation</string>
@@ -16,5 +16,12 @@
     <string name="fernandez_maria_4_27_2021">Fernandez, Maria 4/27/2021</string>
     <string name="matches">Matches go here</string>
     <string name="settings">Settings go here</string>
+    <string name="nav_drawer_open">"Open nav drawer</string>
+    <string name="nav_drawer_close">"Close nav drawer</string>
+    <string name="profile">Profile</string>
+    <string name="match">Match</string>
+    <string name="Titlesettings">Settings</string>
+    <string name="profilepicture">ProfilePicture</string>
+    <string name="userpicture">userPicture</string>
 
 </resources>

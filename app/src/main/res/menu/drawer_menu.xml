@@ -7,15 +7,15 @@
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_profile"
-            android:title="Profile" />
+            android:title="@string/profile" />
         <item
             android:id="@+id/nav_match"
             android:icon="@drawable/ic_match"
-            android:title="Match" />
+            android:title="@string/match" />
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_settings"
-            android:title="Settings" />
+            android:title="@string/Titlesettings" />
 
     </group>
 

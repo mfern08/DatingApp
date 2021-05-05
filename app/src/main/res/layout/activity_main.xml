@@ -85,15 +85,15 @@
             android:layout_height="@dimen/space_height_thirty"/>
 
 
-        <EditText
+        <TextView
             android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/edit_text_padding10"
+            android:layout_width="218dp"
+            android:layout_height="33dp"
             android:layout_gravity="center"
+            android:gravity="center"
             android:ems="10"
-            android:hint="@string/date"
-            android:inputType="date" />
+            android:textSize="17sp"
+            android:hint="@string/date" />
 
         <Space
             android:layout_width="match_parent"
