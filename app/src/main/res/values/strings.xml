@@ -23,5 +23,6 @@
     <string name="Titlesettings">Settings</string>
     <string name="profilepicture">ProfilePicture</string>
     <string name="userpicture">userPicture</string>
+    <string name="like">like</string>
 
 </resources>

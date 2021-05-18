@@ -94,7 +94,7 @@ public class MainActivityTest {
         onView(withId(R.id.date)).perform(click());
         onView(withClassName(Matchers.equalTo(android.widget.DatePicker.class.getName()))).perform(PickerActions.setDate(2020, 9, 30));
         onView(allOf(withId(R.id.date), hasErrorText("Must Be 18+ years")));
-    };
+    }
 
     @Test
     public void RotateAndSignIn(){

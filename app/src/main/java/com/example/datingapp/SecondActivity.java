@@ -118,6 +118,5 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
             this.info = info;
             this.occupation = occupation;
         }
-
     }
 }
