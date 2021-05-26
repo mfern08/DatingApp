@@ -1,4 +1,4 @@
-package com.example.datingapp;
+package com.example.dating_app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -12,7 +12,6 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -22,8 +21,8 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
     private String occupation;
     private String info;
     private String age;
-    private FragmentManager fManager;
     private DrawerLayout drawer;
+    private MatchesViewModel viewModel;
 
 
     @Override
@@ -44,7 +43,7 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        fManager = getSupportFragmentManager();
+        FragmentManager fManager = getSupportFragmentManager();
 
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
@@ -106,13 +105,19 @@ public class SecondActivity extends AppCompatActivity implements NavigationView.
         return true;
     }
 
+    @Override
+    protected void onPause() {
+        viewModel.clear();
+        super.onPause();
+    }
+
     public static class Attachment{
         String name;
         String age;
         String info;
         String occupation;
 
-        Attachment(String name, String age, String bio, String occupation){
+        Attachment(String name, String age, String info, String occupation){
             this.name = name;
             this.age = age;
             this.info = info;

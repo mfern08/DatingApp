@@ -1,4 +1,4 @@
-package com.example.datingapp;
+package com.example.dating_app;
 
 class Constants {
     static final String KEY_NAME = "name";
@@ -7,4 +7,5 @@ class Constants {
     static final String KEY_BUTTON_TXT = "button_txt";
     static final String KEY_AGE = "age";
     static final String KEY_TEXTVIEW_TEXT = "textView";
+    public static final String KEY_MATCHES = "matches";
 }

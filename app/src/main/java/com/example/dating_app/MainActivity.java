@@ -1,10 +1,9 @@
-package com.example.datingapp;
+package com.example.dating_app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
-import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.text.TextUtils;
@@ -16,14 +15,12 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.text.DateFormat;
-import java.time.LocalDate;
-import java.time.Period;
+import com.example.datingapp.R;
+
 import java.util.Calendar;
 import java.util.Date;
 
 import static android.app.DatePickerDialog.OnDateSetListener;
-import static com.example.datingapp.Constants.KEY_AGE;
 
 public class MainActivity extends AppCompatActivity implements OnDateSetListener {
 
@@ -103,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements OnDateSetListener
         }
 
         Bundle bundle = new Bundle();
-        bundle.putInt(KEY_AGE, age);
+        bundle.putInt(Constants.KEY_AGE, age);
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtras(bundle);
     }
@@ -149,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements OnDateSetListener
         Bundle bundle = new Bundle();
 
         bundle.putString(Constants.KEY_NAME, name.getText().toString());
-        bundle.putString(KEY_AGE, age.getText().toString());
+        bundle.putString(Constants.KEY_AGE, age.getText().toString());
         bundle.putString(Constants.KEY_OCC, occupation.getText().toString());
         bundle.putString(Constants.KEY_INFO, info.getText().toString());
         intent.putExtras(bundle);

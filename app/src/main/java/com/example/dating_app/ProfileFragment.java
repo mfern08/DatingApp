@@ -1,4 +1,4 @@
-package com.example.datingapp;
+package com.example.dating_app;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+
+import com.example.datingapp.R;
 
 public class ProfileFragment extends Fragment {
 
