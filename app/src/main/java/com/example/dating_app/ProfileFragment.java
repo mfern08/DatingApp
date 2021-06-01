@@ -10,8 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.datingapp.R;
-
 public class ProfileFragment extends Fragment {
 
     private SecondActivity.Attachment attachment;

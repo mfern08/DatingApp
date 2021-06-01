@@ -15,7 +15,6 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.datingapp.R;
 
 import java.util.Calendar;
 import java.util.Date;

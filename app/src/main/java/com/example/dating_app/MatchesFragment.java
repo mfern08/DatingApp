@@ -9,8 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.datingapp.R;
-
 import java.util.ArrayList;
 
 public class MatchesFragment extends Fragment {

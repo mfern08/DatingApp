@@ -44,7 +44,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="30dp"
-                android:background="@drawable/ic_match"></Button>
+                android:background="@drawable/ic_match" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
