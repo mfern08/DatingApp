@@ -28,19 +28,19 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View veiw = inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        name = veiw.findViewById(R.id.name);
-        age = veiw.findViewById(R.id.date);
-        occupation = veiw.findViewById(R.id.occupation);
-        info = veiw.findViewById(R.id.info);
+        name = view.findViewById(R.id.name);
+        age = view.findViewById(R.id.date);
+        occupation = view.findViewById(R.id.occupation);
+        info = view.findViewById(R.id.info);
 
         name.setText(this.attachment.name);
         age.setText(this.attachment.age);
         occupation.setText(this.attachment.occupation);
         info.setText(this.attachment.info);
 
-        return veiw;
+        return view;
     }
 
     @Override

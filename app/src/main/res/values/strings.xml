@@ -24,5 +24,6 @@
     <string name="Profile_picture">ProfilePicture</string>
     <string name="userpicture">userPicture</string>
     <string name="like">like</string>
+    <string name="match_name">Match Name</string>
 
 </resources>

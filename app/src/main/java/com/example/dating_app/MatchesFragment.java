@@ -15,7 +15,8 @@ public class MatchesFragment extends Fragment {
 
     public ArrayList matchList = new ArrayList();
     private MatchesViewModel viewModel = new MatchesViewModel();
-    private RecyclerView recyclerView;
+    RecyclerView recyclerView;
+    MatchesCardRecyclerViewAdapter adapter;
 
     @Override
     public void onCreate(Bundle savedInstanceSate) {
@@ -33,15 +34,13 @@ public class MatchesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_matches, container, false);
 
         recyclerView = view.findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false));
-        MatchesCardRecyclerViewAdapter adapter = new MatchesCardRecyclerViewAdapter(getContext(),matchList);
+        recyclerView.setHasFixedSize(false);
+        GridLayoutManager gridLayout = new GridLayoutManager(getActivity(), 2,
+                GridLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(gridLayout);
+        adapter = new MatchesCardRecyclerViewAdapter(getContext(), matchList);
         recyclerView.setAdapter(adapter);
-
-        viewModel.getMatches(
-                (ArrayList<Match> matches) -> {
-                    adapter.setMatchesList(matches);
-                    adapter.notifyDataSetChanged();
-                });
+        getMatches();
 
         return view;
     }
@@ -50,6 +49,14 @@ public class MatchesFragment extends Fragment {
     public void onPause() {
         viewModel.clear();
         super.onPause();
+    }
+
+    public void getMatches(){
+        viewModel.getMatches(
+                (ArrayList<Match> matches) -> {
+                    adapter.setMatchesList(matches);
+                    adapter.notifyDataSetChanged();
+                });
     }
 }
 
