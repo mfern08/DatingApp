@@ -1,4 +1,4 @@
-package com.example.datingapp;
+package com.example.dating_app;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
