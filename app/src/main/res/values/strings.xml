@@ -24,6 +24,101 @@
     <string name="Profile_picture">ProfilePicture</string>
     <string name="userpicture">userPicture</string>
     <string name="like">like</string>
+    <string name="pri_account">Private</string>
     <string name="match_name">Match Name</string>
+    <string name="daily_matches_reminder">Daily Matches Reminder</string>
+    <string name="maximum_distance_search_mi">Maximum Distance Search (Mi)</string>
+    <string name="gender">Gender</string>
+    <string name="save">Save</string>
+    <string name="interested_age_range">Interested Age Range</string>
+    <string name="settings_frag">Settings</string>
+    <string name="min_age">min age</string>
+    <string name="max_age">max age</string>
+    <string name="loc_enable">Enable</string>
+    <string name="loc_message">Location Settings is currently Off. Please turn on location to use the app</string>
+    <string name="loc_setting">Location Setting</string>
+    <string name="loc_cancel">Cancel</string>
+    <string name="provider">GPS Provider Running</string>
+    <string-array name="reminders">
+        <item>0:00</item>
+        <item>0:30</item>
+        <item>1:00</item>
+        <item>1:30</item>
+        <item>2:00</item>
+        <item>2:30</item>
+        <item>3:00</item>
+        <item>3:30</item>
+        <item>4:00</item>
+        <item>4:30</item>
+        <item>5:00</item>
+        <item>5:30</item>
+        <item>6:00</item>
+        <item>6:30</item>
+        <item>7:00</item>
+        <item>7:30</item>
+        <item>8:00</item>
+        <item>8:30</item>
+        <item>9:00</item>
+        <item>9:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+        <item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>
+        <item>17:30</item>
+        <item>18:00</item>
+        <item>18:30</item>
+        <item>19:00</item>
+        <item>19:30</item>
+        <item>20:00</item>
+        <item>20:30</item>
+        <item>21:00</item>
+        <item>21:30</item>
+        <item>22:00</item>
+        <item>22:30</item>
+        <item>23:00</item>
+        <item>23:30</item>
+    </string-array>
+
+    <string-array name="dist_max">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>25</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Trans</item>
+        <item>Non-Binary</item>
+        <item>Gender Fluid</item>
+        <item>Pangender</item>
+        <item>Agender/Neither</item>
+        <item>Bigender</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="age">
+        <item>18</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55+</item>
+    </string-array>
 
 </resources>
