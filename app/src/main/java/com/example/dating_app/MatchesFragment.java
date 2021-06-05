@@ -58,6 +58,7 @@ public class MatchesFragment extends Fragment {
         adapter = new MatchesCardRecyclerViewAdapter(getContext(),matchList);
         recyclerView.setAdapter(adapter);
 
+
         viewModel.getMatches(
                 (ArrayList<Match> matches) -> {
                     adapter.setMatchesList(matches);
