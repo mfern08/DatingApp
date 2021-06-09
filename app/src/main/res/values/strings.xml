@@ -39,6 +39,11 @@
     <string name="loc_setting">Location Setting</string>
     <string name="loc_cancel">Cancel</string>
     <string name="provider">GPS Provider Running</string>
+    <string name="enable_location">Enable Location</string>
+    <string name="location_message">Location Settings is Off. Enable setting to use this app</string>
+    <string name="location_settings">Location Setting</string>
+    <string name="location_cancel">Cancel</string>
+    <string name="provider_started_running">GPS Started Running</string>
     <string-array name="reminders">
         <item>0:00</item>
         <item>0:30</item>
